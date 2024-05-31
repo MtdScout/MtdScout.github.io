@@ -64,7 +64,7 @@
                         <!--          </p>-->
                         <div style="text-align: center;">
                             <img src="static/images/overview_1101.png"
-                                style="width:900px !important;height:auto !important;">
+                                style="width:600px !important;height:auto !important;">
                         </div>
                         <p>
                             In this paper, we aim to complement the identification of missed false negatives in both TPL detection and taint analysis by directly identifying clones of insecure methods, regardless of whether they are in the host app code or a shrunk library. We propose MtdScout, a novel cross-layer, method-level clone detection tool for Android apps. MtdScout generates bytecode signatures for flawed source methods using compiler-style interpretation and abstraction, and efficiently matches them with target app bytecode using signature-mapped search trees. Our experiment using ground-truth apps shows that MtdScout achieves the highest accuracy among three tested clone detection tools, with a precision of 92.5% and recall of 87.2%. A large-scale experiment with 23.9K apps from Google Play demonstrates MtdScout's effectiveness in complementing both LibScout and CryptoGuard by identifying numerous false negatives they missed due to app shrinking, method-only cloning, and inherent timeouts and failures in expensive taint analysis. Additionally, our experiment uncovers four security findings that highlight the disparities between MtdScout's method-level clone detection and package-level library detection.
@@ -80,15 +80,14 @@
                     <div class="content has-text-justified">
                         <article class="message is-primary">
                             <pre class="message-body" id="bibtex-text">
-                                @inproceedings{sun2024gptscan,
-                                    author = {Zicheng, Zhang and Haoyu, Ma and Daoyuan, Wu and Debin, Gao and Xiao, Yi and Yufan, Chen and Yan, Wu and Lingxiao, Jiang},
-                                    title = {{MtdScout}: Complementing the Identification of Insecure Methods in Android Apps via Source-to-Bytecode Signature Generation and Tree-based Layered Search},
-                                    year = {2024},
-                                    address = {Vienna, Austria},
-                                    booktitle = {Proceedings of the 9th IEEE European Symposium on Security and Privacy},
-                                    series = {EuroS&P '24}
-                                }
-</pre>
+@inproceedings{zhang2024mtdscout,
+author = {Zicheng, Zhang and Haoyu, Ma and Daoyuan, Wu and Debin, Gao and Xiao, Yi and Yufan, Chen and Yan, Wu and Lingxiao, Jiang},
+title = {{MtdScout}: Complementing the Identification of Insecure Methods in Android Apps via Source-to-Bytecode Signature Generation and Tree-based Layered Search},
+year = {2024},
+address = {Vienna, Austria},
+booktitle = {Proceedings of the 9th IEEE European Symposium on Security and Privacy},
+series = {EuroS&P '24}
+}</pre>
                         </article>
                     </div>
                 </div>
