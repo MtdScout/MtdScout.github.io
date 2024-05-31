@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MtdScout: Complementing the Identification of Insecure Methods in Android Apps via Source-to-Bytecode Signature Generation and Tree-based Layered Search</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/fontawesome.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="column is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">
+                            GPTScan: Detecting Logic Vulnerabilities in Smart Contracts by Combining GPT with Program Analysis
+                        </h1>
+                        <div class="column has-text-centered">
+                            <span class="link-block">
+                                <a href="https://dl.acm.org/doi/abs/10.1145/3597503.3639117"
+                                    class="external-link button is-dark is-rounded ">
+                                    <span class="icon">
+                                        <i class="fas fa-file-pdf"></i>
+                                    </span>
+                                    <span>Paper</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                                <a href="https://arxiv.org/abs/2308.03314"
+                                    class="external-link button is-dark is-rounded ">
+                                    <span class="icon">
+                                        <i class="ai ai-arxiv"></i>
+                                    </span>
+                                    <span>arXiv</span>
+                                </a>
+                            </span>
+                            <!-- Code Link. -->
+                            <span class="link-block">
+                                <a href="https://github.com/GPTScan/GPTScan"
+                                    class="external-link button is-dark is-rounded ">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>Code</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                                <a href="#bibtex" class="external-link button is-dark is-rounded ">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-quote-left"></i>
+                                    </span>
+                                    <span class="show_paper_citations" data="KAWDTzsAAAAJ:YsMSGLbcyi4C">Citations</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Modern Android apps consist of both host app code and third-party libraries. Traditional static analysis tools conduct taint analysis for API misuses on the entire app code, while third-party library (TPL) detection tools focus solely on library code. Both approaches, however, are prone to some inherent false negatives: taint analysis tools may neglect third-party libraries or face timeouts/errors in whole app-based analysis, and TPL detection tools are not designed for pinpointing specific vulnerable methods. These challenges underscore the need for enhanced identification of insecure methods in Android apps, particularly for app markets addressing open-source security incidents. 
+                        </p>
+                        <!--          <p>-->
+                        <!--           k<b><span id="totalnum">123</span></b>-->
+                        <!--          </p>-->
+                        <div style="text-align: center;">
+                            <img src="static/images/GPTScanWorkflow.svg"
+                                style="width:900px !important;height:auto !important;">
+                        </div>
+                        <p>
+                            In this paper, we aim to complement the identification of missed false negatives in both TPL detection and taint analysis by directly identifying clones of insecure methods, regardless of whether they are in the host app code or a shrunk library. We propose MtdScout, a novel cross-layer, method-level clone detection tool for Android apps. MtdScout generates bytecode signatures for flawed source methods using compiler-style interpretation and abstraction, and efficiently matches them with target app bytecode using signature-mapped search trees. Our experiment using ground-truth apps shows that MtdScout achieves the highest accuracy among three tested clone detection tools, with a precision of 92.5% and recall of 87.2%. A large-scale experiment with 23.9K apps from Google Play demonstrates MtdScout's effectiveness in complementing both LibScout and CryptoGuard by identifying numerous false negatives they missed due to app shrinking, method-only cloning, and inherent timeouts and failures in expensive taint analysis. Additionally, our experiment uncovers four security findings that highlight the disparities between MtdScout's method-level clone detection and package-level library detection.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Abstract. -->
+
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3" id="bibtex">Bibtex</h2>
+                    <div class="content has-text-justified">
+                        <article class="message is-primary">
+                            <pre class="message-body" id="bibtex-text">
+@inproceedings{sun2024gptscan,
+    author = {Sun, Yuqiang and Wu, Daoyuan and Xue, Yue and Liu, Han and Wang, Haijun and Xu, Zhengzi and Xie, Xiaofei and Liu, Yang},
+    title = {{GPTScan}: Detecting Logic Vulnerabilities in Smart Contracts by Combining GPT with Program Analysis},
+    year = {2024},
+    isbn = {9798400702174},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3597503.3639117},
+    doi = {10.1145/3597503.3639117},
+    booktitle = {Proceedings of the IEEE/ACM 46th International Conference on Software Engineering},
+    articleno = {166},
+    numpages = {13},
+    series = {ICSE '24}
+}</pre>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Related Works</h2>
+                    <div class="content has-text-justified">
+                        <ul>
+                            <li>
+                                LLM4Vuln: A Unified Evaluation Framework for Decoupling and Enhancing LLMs' Vulnerability Reasoning [<a href="https://arxiv.org/abs/2401.16185">arXiv</a>]
+                            </li>
+                            <li>
+                                Combining Fine-Tuning and LLM-based Agents for Intuitive Smart Contract Auditing with Justifications [<a href="https://arxiv.org/abs/2403.16073">arXiv</a>]
+                            </li>
+                            <li>
+                                PropertyGPT: LLM-driven Formal Verification of Smart Contracts through Retrieval-Augmented Property Generation [<a href="https://arxiv.org/abs/2405.02580">arXiv</a>]
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="container is-max-desktop">
+
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">Authors</h2>
+                        <div class="column">
+                            <table width="100%">
+                                <tr>
+                                    <td width="25%"><img class="custom-style" src="static/images/yuqiang.jpg">
+                                    </td>
+                                    <td width="25%"><img class="custom-style" src="static/images/daoyuan.jpg">
+                                    </td>
+                                    <td width="25%"><img class="custom-style" src="static/images/avatar_scholar_256.png">
+                                    </td>
+                                    <td width="25%"><img class="custom-style" src="static/images/liuhan.jpg">
+                                    </td>
+                                </tr>
+                                <table>
+                                    <table width="100%">
+                                        <tr>
+                                            <td width="25%"><a href="https://aboutme.izaiahsun.com/">
+                                                    <span class="tag is-light">Yuqiang Sun</span>
+                                                </a></td>
+                                            <td width="25%"><a href="https://daoyuan14.github.io/">
+                                                    <span class="tag is-light">Daoyuan Wu</span>
+                                                </a></td>
+                                            <td width="25%"><a href="#">
+                                                    <span class="tag is-light">Yue Xue</span>
+                                                </a></td>
+                                            <td width="25%"><a href="https://helayliu.github.io/">
+                                                    <span class="tag is-light">Han Liu</span>
+                                                </a></td>
+                                        </tr>
+                                    </table>
+                                </table>
+                            </table>
+                            <br>
+                            <br>
+                            <table width="100%">
+                                <tr>
+                                    <td width="25%"><img class="custom-style" src="static/images/haijun.jpg">
+                                    </td>
+                                    <td width="25%"><img class="custom-style" src="static/images/zhengzi.jpg">
+                                    </td>
+                                    <td width="25%"><img class="custom-style" src="static/images/xiaofei.jpg">
+                                    </td>
+                                    <td width="25%"><img class="custom-style" src="static/images/liuyang.jpg">
+                                    </td>
+                                </tr>
+                                <table>
+                                    <table width="100%">
+                                        <tr>
+                                            <td width="25%"><a href="#">
+                                                    <span class="tag is-light">Haijun Wang</span>
+                                                </a></td>
+                                            <td width="25%"><a
+                                                    href="https://scholar.google.com/citations?user=zr6yQtsAAAAJ&hl=en">
+                                                    <span class="tag is-light">Zhengzi Xu</span>
+                                                </a></td>
+                                            <td width="25%"><a href="https://xiaofeixie.bitbucket.io/">
+                                                    <span class="tag is-light">Xiaofei Xie</span>
+                                                </a></td>
+                                            <td width="25%"><a href="https://personal.ntu.edu.sg/yangliu/">
+                                                    <span class="tag is-light">Yang Liu</span>
+                                                </a></td>
+                                        </tr>
+                                    </table>
+                                </table>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/js/all.min.js"></script>
+<script src="static/js/scholar.js"></script>
+
+</html>
